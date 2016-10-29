@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <title></title>
     <link rel="stylesheet" href="{% static 'css/semantic.css' %}" >
+    <link rel="stylesheet" href="{% static 'css/index.css' %}" >
   </head>
   <body>
     <div class="ui visible left thin sidebar inverted vertical menu">
@@ -13,7 +14,7 @@
       </div>
       <div class="item">
         数据展示
-        <i class="browser icon"></i>
+        <i class="orange browser icon"></i>
       </div>
       <div class="item">
         图标展示
@@ -26,13 +27,15 @@
     </div>
       <div class="pusher">
         <div class="ui top attached menu">
-          <div class="header item" id="menu">
-            <i class="content icon"></i>
-            Menu
+{#          <div class="header item" id="menu">#}
+{#            <i class="content icon"></i>#}
+{#            菜单#}
+{#          </div>#}
+          <div class="header item">
+              <a href="../index3" target="_blank"><i class="sitemap icon"></i>数据分析</a>
           </div>
-          <div class="item">data analysis</div>
-          <div class="item">The lab</div>
-          <div class="item">data</div>
+          <div class="header item"><i class="list icon"></i>数据表格</div>
+          <div class="header item"><i class="content icon"></i>数据</div>
         </div>
         <div class="ui container" style="margin:70px 0 0 0">
           <div class="ui divided items">
@@ -44,7 +47,7 @@
                         <span class="ui label"> {{ item.area }} </span>
 {#                        <span class="ui label" style="color:red"> {{ item.user }} </span>#}
                     </div>
-                    <div class="description" style="display:inline-block;margin-right: 50px">{{ item.price }}</div>
+                    <div class="description" style="display:inline-block;margin-right: 50px">{{ item.price }}</div>来自：
                     <span class="ui" style="color:blue"> {{ item.user }} </span>
                   </div>
                 </div>
