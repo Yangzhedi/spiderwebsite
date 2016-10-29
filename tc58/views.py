@@ -4,7 +4,7 @@ from django.core.paginator import Paginator
 
 
 def index(request):
-    limit = 3
+    limit = 4
     arti_info = ArtiInfo.objects[:20]
     paginatior = Paginator(arti_info, limit)
     page = request.GET.get('page',1)
@@ -12,14 +12,13 @@ def index(request):
     print request.GET
     loaded = paginatior.page(page)
 
-
     context = {
         # 'title': arti_info[0].title[9:20],           # 'Just a title',
         # 'des':  arti_info[0].area,  # 'Just a des',
         # 'score': arti_info[0].price,  # '1.0'
         'ArtiInfo': loaded
     }
-    return render(request,'index.html',context)
+    return render(request,'Components/index.html',context)
 
 
 # def new_index(request):
@@ -34,7 +33,6 @@ def index3(request):
     print request
     print request.GET
     loaded = paginatior.page(page)
-
 
     context = {
         # 'title': arti_info[0].title[9:20],           # 'Just a title',

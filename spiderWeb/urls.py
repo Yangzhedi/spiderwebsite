@@ -20,6 +20,6 @@ from tc58.views import index,index3
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^index/', index3),
-    url(r'^index2/', index3)
+    url(r'^index/', index),
+    url(r'^index3/', index3)
 ]
