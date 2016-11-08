@@ -4,7 +4,7 @@ from django.core.paginator import Paginator
 
 
 def index(request):
-    limit = 4
+    limit = 15
     arti_info = ArtiInfo.objects[:20]
     paginatior = Paginator(arti_info, limit)
     page = request.GET.get('page',1)
